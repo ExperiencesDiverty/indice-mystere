@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indice mystère</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1b1b1b, #3a2d5c);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 36px 28px;
+      max-width: 520px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .emoji {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .code {
+      font-size: 42px;
+      font-weight: bold;
+      background: white;
+      color: #2c2250;
+      padding: 18px 28px;
+      border-radius: 18px;
+      margin: 24px 0;
+      display: inline-block;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="emoji">🧩</div>
+    <h1>Votre indice mystère</h1>
+    <div class="code" id="code"></div>
+    <p>Gardez-le précieusement. Il pourrait vous donner un avantage pendant l’activité.</p>
+  </div>
+
+  <script>
+    const codes = ["CADENAS", "CADEAU", "MASQUE"];
+    const choix = codes[Math.floor(Math.random() * codes.length)];
+    document.getElementById("code").textContent = choix;
+  </script>
+</body>
+</html>
