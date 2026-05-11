@@ -59,13 +59,13 @@
 <body>
   <div class="card">
     <div class="emoji">🧩</div>
-    <h1> Merci d'avoir répondu ! Voici votre indice mystère</h1>
+    <h1>Votre indice mystère</h1>
     <div class="code" id="code"></div>
     <p>Gardez-le précieusement. Il pourrait vous donner un avantage pendant l’activité.</p>
   </div>
 
   <script>
-    const codes = ["COEUR", "BIJOU", "BRAQUAGE"];
+    const codes = ["CADENAS", "CADEAU", "MASQUE"];
     const choix = codes[Math.floor(Math.random() * codes.length)];
     document.getElementById("code").textContent = choix;
   </script>
